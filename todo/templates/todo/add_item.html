@@ -9,16 +9,17 @@
 <body>
     <h1>Add a Todo Item:</h1>
     <form method="POST" action="add">
+        {% csrf_token %}
         <div>
             <p>
-                <label for="id-name">Name:</label>
-                <input type="text" id="id-name" name="itenm-name">
+                <label for="id_name">Name:</label>
+                <input type="text" id="id-name" name="item_name">
             </p>
         </div>
         <div>
             <p>
-                <label for="id-done">Done:</label>
-                <input type="checkbox" id="id-done" name="done">
+                <label for="id_done">Done:</label>
+                <input type="checkbox" id="id_done" name="done">
             </p>
         </div>
         <div>
